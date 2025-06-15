@@ -8,6 +8,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.scene.image.Image;
 
 import java.io.IOException;
 
@@ -35,6 +36,7 @@ public class MainApplication extends Application {
         stage.setTitle(env.getBrowserName());
 //        stage.initStyle(StageStyle.UTILITY);
         stage.setScene(scene);
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/com/main/browser/LOGO.png")));
         stage.show();
     }
 
