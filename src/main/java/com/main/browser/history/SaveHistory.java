@@ -18,9 +18,8 @@ public class SaveHistory {
     public static void saveHistoryItem(HistoryItem item,ENV env) {
         try {
             env = env;
-            String appData = System.getenv("APPDATA");
-            String dirPath = appData + File.separator + env.getBrowserName();
-            String filePath = dirPath + File.separator + "history.json";
+            String dirPath = env.getAppDataPath();
+            String filePath = env.jsonfile();
             File dir = new File(dirPath);
             if (!dir.exists()) dir.mkdirs();
 

@@ -74,6 +74,16 @@ public class MainController implements Initializable {
         return newTab;
     }
 
+    public void addTab(){
+        addNewTab();
+        Tab newTab = addNewTab();
+
+        if (newTab != null) {
+            tabPane.getSelectionModel().select(newTab);
+        }
+    }
+
+
     // Helper method to create and add a tab with a given URL and closable status
     private Tab createAndAddTab(String defaultUrl, boolean closable) {
         Tab newTab = new Tab("Loading...");

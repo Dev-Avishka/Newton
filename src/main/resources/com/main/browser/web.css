@@ -1,8 +1,8 @@
 .urlbar {
-    -fx-min-height: 45px;
-    -fx-pref-height: 45px;
-    -fx-max-height: 45px;
-    -fx-font-size: 20px;
+    -fx-min-height: 40px;
+    -fx-pref-height: 40px;
+    -fx-max-height: 40px;
+    -fx-font-size: 15px;
     -fx-background-radius: 22.5px;
     -fx-border-radius: 22.5px;
     -fx-alignment: center-left;
