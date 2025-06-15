@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.WebView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<VBox fx:controller="com.main.browser.Webcontroller"
+      xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER"
+      stylesheets="@web.css">
+    <HBox alignment="CENTER" spacing="10" styleClass="navbar">
+        <Text text="." styleClass="white" style="-fx-fill: #f8f8f8;"></Text>
+        <Button fx:id="Home" text="🏠" onAction="#home" styleClass="navb"/>
+        <Button fx:id="back" text="◀" onAction="#goBack" styleClass="navb"/>
+        <TextField fx:id="urlField" promptText="Enter URL here" prefWidth="600.0" onAction="#onEnterPressed" styleClass="urlbar" HBox.hgrow="ALWAYS"/>
+        <Text text="    .      " styleClass="white" style="-fx-fill: #f8f8f8;"></Text>
+    </HBox>
+    <!-- WebView component to display web content -->
+    <WebView fx:id="webView" VBox.vgrow="ALWAYS"/>
+</VBox>
