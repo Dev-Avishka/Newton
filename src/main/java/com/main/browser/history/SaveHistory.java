@@ -15,8 +15,9 @@ import java.util.List;
 public class SaveHistory {
 
     public static ENV env;
-    public static void saveHistoryItem(HistoryItem item) {
+    public static void saveHistoryItem(HistoryItem item,ENV env) {
         try {
+            env = env;
             String appData = System.getenv("APPDATA");
             String dirPath = appData + File.separator + env.getBrowserName();
             String filePath = dirPath + File.separator + "history.json";

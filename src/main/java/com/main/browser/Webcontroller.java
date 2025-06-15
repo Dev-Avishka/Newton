@@ -105,15 +105,14 @@ public class Webcontroller implements Initializable {
     public void save_history(){
         String title = webEngine.getTitle();
         String url = webEngine.getLocation();
-        String date = java.time.LocalDateTime.now().toString(); // Get current date and time
-
-        if(url == "google.com" || url == "https://www.google.com" || url == "https://www.google.com/"){
-            return; // Do not save Google search page
-        }
+        String date = java.time.LocalDateTime.now().toString();
         // Create a new HistoryItem
         HistoryItem item = new HistoryItem(title, url, date);
-
+        /*
+        Todo:
+         -Donot save google.com
+        * */
         // Save the history item using SaveHistory class
-        SaveHistory.saveHistoryItem(item);
+        SaveHistory.saveHistoryItem(item, MainApplication.env);
     }
 }

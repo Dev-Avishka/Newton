@@ -11,6 +11,7 @@ public class MainApplication extends Application {
     public static ENV env;
     @Override
     public void start(Stage stage) throws IOException {
+        env = new ENV();
 
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
 
